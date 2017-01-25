@@ -1,0 +1,296 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+  background-color: #ededed;
+}
+
+.header {
+  width: 100%;
+  background-color: #398dda;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  position: fixed;
+}
+
+.header img {
+  padding: 15px;
+}
+
+.header img:nth-child(1) {
+  padding-right: 5px;
+}
+
+.circleMenu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  margin-top: 93%;
+  margin-left: 85%;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  height: 65px;
+  border-radius: 100%;
+  background-color: #ebebeb;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+  margin-top: 5px;
+  transition: 500ms ease;
+}
+
+#mainCircle {
+  background-color: #398dda;
+}
+
+.crc {
+  display: none;
+}
+
+#mainCircle:hover {
+  transform: rotate(180deg);
+}
+
+#title {
+  color: #fff;
+  padding: 15px;
+  padding-left: 0px;
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.content {
+  padding:10px;
+  background-color: #ededed;
+  padding-top: 70px;
+}
+
+.feed {
+  border-radius: 1px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: auto;
+  padding-bottom: 10px;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+.btnCircle {
+  width: 60px;
+  height: 60px;
+  background-color: #398dda;
+  border-radius: 100%;
+  margin-left: auto;
+  margin-top: -30px;
+  margin-right: 25px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 250ms ease;
+}
+
+.btnCircle:hover {
+  transform: rotate(360deg);
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+}
+
+#img2 {
+  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/c6de8932415023.568174ffd2699.png");
+}
+
+#img1 {
+  background-image: url("http://orig12.deviantart.net/ef42/f/2015/341/d/6/flat_landscape__winter_edition__by_jovicasmileski-d9jbz70.jpg");
+}
+
+#img3 {
+  background-image: url("http://www.img.lirent.net/2014/10/Android-Lollipop-wallpapers-p.png");
+}
+
+#img4 {
+  background-image: url("http://wallup.net/wp-content/uploads/2015/12/78274-nature-landscape-fantasy_art-low_poly.png");
+}
+
+.text {
+  padding: 20px;
+  padding-top: 10px;
+  line-height: 24px;
+  color: #323232;
+}
+
+.div-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 15px;
+}
+
+.button {
+  /*width: 70px;*/
+  padding: 10px;
+  margin-right: 5px;
+  text-align: center;
+  border-radius: 2px;
+  color: #4e4e4e;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #ddecf9;
+  color: #20598c;
+}
+
+#btnReset {
+  padding: 20px;
+  width: 200px;
+  margin: auto;
+  display: none;
+  background-color: #398dda;
+  border-radius: 2px;
+  color: #fff;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
+  transition: 300ms ease;
+}
+
+#btnReset:hover {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+#del1:hover, #del2:hover, #del3:hover {
+  background-color: rgba(221, 67, 67, 0.2);
+}
+
+.action {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  height: 20;
+  width: 20;
+  margin-right: 20px;
+}
+
+.actionMenu {
+  height: 0;
+  min-width: 170px;
+  margin-left: -130px;
+  margin-top: -50px;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 2px;
+  /*opacity: 0;*/
+  display: none;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+}
+
+.actionMenu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.actionMenu ul li {
+  padding: 15px;
+  list-style: none;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+ul li:hover {
+  background-color: #f4f4f4;
+}
+
+.menu {
+  position: fixed;
+  height: 100vh;
+  width: 80%;
+  background-color: #fff;
+  margin-left: -80%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+  overflow: auto;
+  z-index: 5;
+}
+
+.blockArena, .blockArena2 {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  display: none;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.blockArena2 {
+  z-index: 3;
+}
+
+.menuHead {
+  width: 100%;
+  position: relative;
+  height: 180px;
+  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/59/05/f4/5905f4b95a51ad49b9036f097e0cdc05.png");
+  background-position: center;
+  background-size: cover;
+  padding-top: 20px;
+}
+
+.data {
+  color: #f1f1f1;
+  display: flex;
+  margin-top: 40px;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 20px;
+}
+
+#name {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+#email {
+  font-size: 16px;
+}
+
+.profilePic {
+  margin-left: 30px;
+  height: 85px;
+  width: 85px;
+  background-image: url("http://i65.tinypic.com/214v4ib.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 100%;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.list {
+  margin-top: 20px;
+}
+
+.list ul {
+  padding: 0;
+}
+
+.list ul li img {
+  margin-right: 15px;
+}
+
+.list ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px;
+  color: #454545
+}

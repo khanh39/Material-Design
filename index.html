@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Material Design</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <div id="menuButton">
+        <img src="http://i67.tinypic.com/14j2r7d.png" width="20" height="20" alt="">
+      </div>
+      <div class="blockArena">
+        <div class="menu">
+          <div class="menuHead">
+            <div class="profilePic"></div>
+            <div class="data">
+              <span id="name">Hamza Khan</span>
+              <span id="email">email@example.com</span>
+            </div>
+          </div>
+
+          <div class="list">
+            <ul>
+              <li><img src="http://i65.tinypic.com/2418fvn.png" alt="">Some text here</li>
+              <li><img src="http://i65.tinypic.com/2418fvn.png" alt="">Some other one</li>
+              <li><img src="http://i65.tinypic.com/2418fvn.png" alt="">This is some large text</li>
+              <li><img src="http://i65.tinypic.com/2418fvn.png" alt="">Text sample</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+      <div id="title">Activity Feed</div>
+      <div class="blockArena2">
+      </div>
+    </div>
+    <div class="content" id="content">
+      <div class="feed" id="feed1">
+        <div class="image" id="img1"></div>
+        <div class="btnCircle">
+          <img src="http://i65.tinypic.com/x1ammq.png" alt="">
+        </div>
+        <div class="text">
+          <p>
+            Cras vitae porta lacus, sed pretium urna. Sed volutpat arcu ut quam dictum tristique. </p>
+        </div>
+      <div class="div-button">
+        <div class="button">
+          Button
+        </div>
+        <div class="button" id="del1">
+          Remove
+        </div>
+      </div>
+      </div>
+      <div class="feed" id="feed2">
+        <div class="image" id="img2"></div>
+        <div class="btnCircle">
+          <img src="http://i65.tinypic.com/x1ammq.png" alt="">
+        </div>
+        <div class="text">
+          <p> Cras vitae porta lacus, sed pretium urna. Sed volutpat arcu ut quam dictum tristique.
+             </p>
+        </div>
+      <div class="div-button">
+        <div class="button">
+          Button
+        </div>
+        <div class="button" id="del2">
+          Remove
+        </div>
+      </div>
+      </div>
+      <div class="feed" id="feed3">
+        <div class="image" id="img3"></div>
+        <div class="btnCircle">
+          <img src="http://i65.tinypic.com/x1ammq.png" alt="">
+        </div>
+        <div class="text">
+          <p> Cras vitae porta lacus, sed pretium urna. Sed volutpat arcu ut quam dictum tristique. </p>
+        </div>
+      <div class="div-button">
+        <div class="button">
+          Button
+        </div>
+        <div class="button" id="del3">
+          Remove
+        </div>
+      </div>
+      </div>
+
+      <div class="feed" id="feed4">
+        <div class="image" id="img4"></div>
+        <div class="btnCircle">
+          <img src="http://i65.tinypic.com/x1ammq.png" alt="">
+        </div>
+        <div class="text">
+          <p>Cras vitae porta lacus, sed pretium urna. Sed volutpat arcu ut quam dictum tristique.
+            </p>
+        </div>
+      <div class="div-button">
+        <div class="button">
+          Button
+        </div>
+        <div class="button" id="del4">
+          Remove
+        </div>
+      </div>
+      </div>
+
+      <div class="button" id="btnReset">
+        Reset
+      </div>
+
+    </div>
+
+    <script>
+
+      $(document).ready(function(){
+
+        var feed1 = true;
+        var feed2 = true;
+        var feed3 = true;
+        var feed4 = true;
+
+        $("#menuButton").click(function(){
+          $(".blockArena").css("display", "block");
+          $(".menu").animate({
+            left: "80%"
+          }, 300);
+        });
+
+        $(".blockArena").click(function(){
+          $(".menu").animate({
+            left: "0"
+          }, 300, function(){
+            $(".blockArena").css("display", "none");
+          });
+        });
+
+        $(".action").click(function(){
+          $(".actionMenu").css("display", "block");
+          $(".actionMenu").animate({
+            height: "230"
+          }, 100, function(){
+            $(".blockArena2").css("display", "block");
+          });
+        });
+
+        $(".blockArena2").click(function(){
+          $(".actionMenu").css("display", "none");
+          $(".actionMenu").animate({
+            height: "0"
+          }, 100, function(){
+            $(".blockArena2").css("display", "none");
+          });
+        });
+
+        $("#mainCircle").click(function(){
+          if (isShown == false){
+            isShown = true;
+            $(".crc").css("display", "block");
+            $(".circleMenu").animate({
+              marginTop: "50%"
+            }, 300);
+          }else {
+            isShown = false;
+            $(".crc").css("display", "none");
+            $(".circleMenu").css("margin-top", "93%");
+          }
+        });
+
+        $("#del1").click(function(){
+          feed1 = false;
+          $("#feed1").animate({
+            height: "0"
+          }, function(){
+            $("#feed1").css("display", "none");
+            if (feed1 == false && feed2 == false && feed3 == false && feed4 == false) {
+              $("#btnReset").css("display", "block");
+            }
+          });
+        });
+
+        $("#del2").click(function(){
+          feed2 = false;
+          $("#feed2").animate({
+            height: "0"
+          }, function(){
+            $("#feed2").css("display", "none");
+            if (feed1 == false && feed2 == false && feed3 == false && feed4 == false) {
+              $("#btnReset").css("display", "block");
+            }
+          });
+        });
+
+        $("#del3").click(function(){
+          feed3 = false;
+          $("#feed3").animate({
+            height: "0"
+          }, function(){
+            $("#feed3").css("display", "none");
+            if (feed1 == false && feed2 == false && feed3 == false && feed4 == false) {
+              $("#btnReset").css("display", "block");
+            }
+          });
+        });
+
+        $("#del4").click(function(){
+          feed4 = false;
+          $("#feed4").animate({
+            height: "0"
+          }, function(){
+            $("#feed4").css("display", "none");
+            if (feed1 == false && feed2 == false && feed3 == false && feed4 == false) {
+              $("#btnReset").css("display", "block");
+            }
+          });
+        });
+
+        $("#btnReset").click(function(){
+          feed1 = true;
+          feed2 = true;
+          feed3 = true;
+          feed4 = true
+
+          $(".feed").css("display", "block");
+          $(".feed").animate({height: "400px"}, 200, function(){
+            $("#btnReset").css("display", "none");
+          });
+
+        });
+
+
+      });
+
+    </script>
+
+  </body>
+</html>
